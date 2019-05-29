@@ -2,8 +2,8 @@
 
 Summary:	Themes for MATE
 Name:		mate-themes
-Version:	1.8.1
-Release:	2
+Version:	3.20.9
+Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://mate-desktop.org
@@ -57,7 +57,7 @@ if [ $1 -eq 0 ] ; then
 fi
 
 %files -f %{name}.lang
-%doc README NEWS AUTHORS 
+%doc README NEWS AUTHORS
 %{_iconsdir}/ContrastHigh-SVG/*
 %{_iconsdir}/ContrastHigh/index.theme
 %{_iconsdir}/ContrastHighInverse/index.theme
@@ -153,4 +153,3 @@ fi
 %{_datadir}/themes/TraditionalOk/openbox-3
 %{_datadir}/themes/TraditionalOk/wallpapers
 %{_datadir}/themes/TraditionalOk/xfwm4
-

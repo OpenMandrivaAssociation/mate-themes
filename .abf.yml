@@ -1,2 +1,4 @@
+removed_sources:
+  mate-themes-1.8.1.tar.xz: 1e03cf7adc35a115d73ec76194f3bc98d0101d88
 sources:
-  "mate-themes-1.8.1.tar.xz": 1e03cf7adc35a115d73ec76194f3bc98d0101d88
+  mate-themes-3.20.9.tar.xz: cd3f616ccb07c8b2b8f5058e9120e5aad20a89cd
