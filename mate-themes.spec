@@ -1,11 +1,11 @@
-%define url_ver %(echo %{version}|cut -d. -f1,2)
+define url_ver %(echo %{version}|cut -d. -f1,2)
 
 Summary:	Themes for MATE
 Name:		mate-themes
-Version:	3.22.12
+Version:	3.22.19
 Release:	1
 License:	LGPLv2+ and GPLv2+ and GPLv3+
-Group:		Graphical desktop/GNOME
+Group:		Graphical desktop/Other
 Url:		https://mate-desktop.org
 Source0:	https://pub.mate-desktop.org/releases/themes/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
@@ -63,13 +63,13 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/Blue-Submarine/gtk-3.0
 %{_datadir}/themes/Blue-Submarine/index.theme
 %{_datadir}/themes/Blue-Submarine/metacity-1
-# ContrastHighInverse
-%dir %{_datadir}/themes/ContrastHighInverse/
-%{_datadir}/themes/ContrastHighInverse/gtk-2.0
-%{_datadir}/themes/ContrastHighInverse/gtk-3.0
-%{_datadir}/themes/ContrastHighInverse/index.theme
-%{_datadir}/themes/ContrastHighInverse/metacity-1
-%{_datadir}/themes/ContrastHighInverse/pixmaps
+# ContrastHigh
+%dir %{_datadir}/themes/ContrastHigh/
+#%{_datadir}/themes/ContrastHigh/gtk-2.0
+#%{_datadir}/themes/ContrastHigh/gtk-3.0
+%{_datadir}/themes/ContrastHigh/index.theme
+#%{_datadir}/themes/ContrastHigh/metacity-1
+#%{_datadir}/themes/ContrastHigh/pixmaps
 # GreenLaguna
 %dir %{_datadir}/themes/GreenLaguna/
 %{_datadir}/themes/GreenLaguna/gtk-3.0
@@ -100,6 +100,19 @@ This packages provides Themes for MATE.
 %{_iconsdir}/ContrastHigh/icon-theme.cache
 %{_iconsdir}/ContrastHigh/index.theme
 %{_iconsdir}/ContrastHigh/scalable
+# HighContrastInverse (fix)
+%dir %{_datadir}/themes/HighContrastInverse
+%{_datadir}/themes/HighContrast/metacity-1
+%dir %{_iconsdir}/HighContrast/
+%{_iconsdir}/HighContrast/16x16
+%{_iconsdir}/HighContrast/22x22
+%{_iconsdir}/HighContrast/24x24
+%{_iconsdir}/HighContrast/32x32
+%{_iconsdir}/HighContrast/48x48
+%{_iconsdir}/HighContrast/256x256
+%{_iconsdir}/HighContrast/icon-theme.cache
+%{_iconsdir}/HighContrast/index.theme
+%{_iconsdir}/HighContrast/scalable
 # Menta
 %dir %{_datadir}/themes/Menta/
 %{_datadir}/themes/Menta/cinnamon
@@ -110,8 +123,8 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/Menta/metacity-1
 %{_datadir}/themes/Menta/unity
 %{_datadir}/themes/Menta/xfwm4
-%doc %{_datadir}/themes/Menta/README
 %doc %{_datadir}/themes/Menta/COPYING
+%doc %{_datadir}/themes/Menta/README
 # Shiny
 %dir %{_datadir}/themes/Shiny/
 %{_datadir}/themes/Shiny/metacity-1
@@ -121,6 +134,17 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/TraditionalGreen/gtk-3.0
 %{_datadir}/themes/TraditionalGreen/index.theme
 %{_datadir}/themes/TraditionalGreen/metacity-1
+%doc %{_datadir}/themes/TraditionalGreen/COPYING
+# TraditionalGreen (fix)
+%dir %{_datadir}/themes/TraditionalGreen/
+#%{_datadir}/themes/TraditionalGree/cinnamon
+#%{_datadir}/themes/TraditionalGreen/emerald
+%{_datadir}/themes/TraditionalGreen/gtk-2.0
+%{_datadir}/themes/TraditionalGreen/gtk-3.0
+%{_datadir}/themes/TraditionalGreen/index.theme
+%{_datadir}/themes/TraditionalGreen/metacity-1
+#%{_datadir}/themes/TraditionalGreen/unity
+#%{_datadir}/themes/TraditionalGreen/xfwm4
 %doc %{_datadir}/themes/TraditionalGreen/COPYING
 # TraditionalOk
 %dir %{_datadir}/themes/TraditionalOk/
@@ -136,34 +160,47 @@ This packages provides Themes for MATE.
 
 %prep
 %setup -q
+# patch1
+mv icon-themes/ContrastHigh/16x16/apps/gnome-power-manager.png \
+   icon-themes/ContrastHigh/16x16/apps/mate-power-manager.png
+mv icon-themes/ContrastHigh/22x22/apps/gnome-power-manager.png \
+   icon-themes/ContrastHigh/22x22/apps/mate-power-manager.png
+mv icon-themes/ContrastHigh/24x24/apps/gnome-power-manager.png \
+   icon-themes/ContrastHigh/24x24/apps/mate-power-manager.png
+mv icon-themes/ContrastHigh/256x256/apps/gnome-power-manager.png \
+   icon-themes/ContrastHigh/256x256/apps/mate-power-manager.png
+mv icon-themes/ContrastHigh/32x32/apps/gnome-power-manager.png \
+   icon-themes/ContrastHigh/32x32/apps/mate-power-manager.png
+mv icon-themes/ContrastHigh/48x48/apps/gnome-power-manager.png \
+   icon-themes/ContrastHigh/48x48/apps/mate-power-manager.png
+
 
 %build
-#NOCONFIGURE=yes ./autogen.sh
+NOCONFIGURE=yes ./autogen.sh
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 for t in ContrastHigh; do
-	touch %{buildroot}%{_iconsdir}/$t/icon-theme.cache
+    touch %{buildroot}%{_iconsdir}/$t/icon-theme.cache
 done
 
 %post
 for t in ContrastHigh; do
-	touch --no-create %{_iconsdir}/$t &>/dev/null || :
+    touch --no-create %{_iconsdir}/$t &>/dev/null || :
 done
 
 %posttrans
 for t in ContrastHigh; do
-	gtk-update-icon-cache %{_iconsdir}/$t &>/dev/null || :
+    gtk-update-icon-cache %{_iconsdir}/$t &>/dev/null || :
 done
 
 %postun
 if [ $1 -eq 0 ] ; then
-	for t in ContrastHigh; do
-		touch --no-create %{_iconsdir}/$t &>/dev/null || :
-		gtk-update-icon-cache %{_iconsdir}/$t &>/dev/null || :
-	done
+    for t in ContrastHigh; do
+	touch --no-create %{_iconsdir}/$t &>/dev/null || :
+	gtk-update-icon-cache %{_iconsdir}/$t &>/dev/null || :
+    done
 fi
-
