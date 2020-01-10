@@ -43,6 +43,9 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/BlackMATE/unity
 %doc %{_datadir}/themes/BlackMATE/README
 %doc %{_datadir}/themes/BlackMATE/COPYING
+%{_datadir}/themes/BlackMATE-border/*
+# BlackCursor
+%{_datadir}/icons/mate-black/cursors/*
 # BlueMenta
 %dir %{_datadir}/themes/BlueMenta/
 %{_datadir}/themes/BlueMenta/cinnamon
@@ -53,6 +56,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/BlueMenta/metacity-1
 %{_datadir}/themes/BlueMenta/unity
 %{_datadir}/themes/BlueMenta/xfwm4
+%{_datadir}//themes/BlueMenta-border/*
 %doc %{_datadir}/themes/BlueMenta/README
 %doc %{_datadir}/themes/BlueMenta/COPYING
 # Blue-Submarine
@@ -63,6 +67,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/Blue-Submarine/gtk-3.0
 %{_datadir}/themes/Blue-Submarine/index.theme
 %{_datadir}/themes/Blue-Submarine/metacity-1
+%{_datadir}/themes/Blue-Submarine-border/*
 # ContrastHigh
 %dir %{_datadir}/themes/ContrastHigh/
 #%{_datadir}/themes/ContrastHigh/gtk-2.0
@@ -87,6 +92,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/Green-Submarine/gtk-2.0
 %{_datadir}/themes/Green-Submarine/metacity-1
 %{_datadir}/themes/Green-Submarine/index.theme
+%{_datadir}/themes/Green-Submarine-border/*
 # HighContrast
 %dir %{_datadir}/themes/HighContrast/
 %{_datadir}/themes/HighContrast/metacity-1
@@ -100,8 +106,12 @@ This packages provides Themes for MATE.
 %{_iconsdir}/ContrastHigh/icon-theme.cache
 %{_iconsdir}/ContrastHigh/index.theme
 %{_iconsdir}/ContrastHigh/scalable
+
 # HighContrastInverse (fix)
 %dir %{_datadir}/themes/HighContrastInverse
+%{_datadir}/themes/HighContrastInverse/gtk-2.0/gtkrc
+%{_datadir}/themes/HighContrastInverse/index.theme
+%{_datadir}/themes/HighContrastInverse/pixmaps/*
 %{_datadir}/themes/HighContrast/metacity-1
 # Menta
 %dir %{_datadir}/themes/Menta/
@@ -115,6 +125,10 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/Menta/xfwm4
 %doc %{_datadir}/themes/Menta/COPYING
 %doc %{_datadir}/themes/Menta/README
+%{_datadir}/themes/Menta-border/COPYING
+%{_datadir}/themes/Menta-border/README
+%{_datadir}/themes/Menta-border/index.theme
+%{_datadir}/themes/Menta-border/metacity-1/
 # Shiny
 %dir %{_datadir}/themes/Shiny/
 %{_datadir}/themes/Shiny/metacity-1
