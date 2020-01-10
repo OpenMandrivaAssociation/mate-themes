@@ -161,19 +161,6 @@ This packages provides Themes for MATE.
 %prep
 %setup -q
 # patch1
-mv icon-themes/ContrastHigh/16x16/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/16x16/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/22x22/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/22x22/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/24x24/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/24x24/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/256x256/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/256x256/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/32x32/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/32x32/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/48x48/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/48x48/apps/mate-power-manager.png
-
 
 %build
 NOCONFIGURE=yes ./autogen.sh
