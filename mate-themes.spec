@@ -103,16 +103,6 @@ This packages provides Themes for MATE.
 # HighContrastInverse (fix)
 %dir %{_datadir}/themes/HighContrastInverse
 %{_datadir}/themes/HighContrast/metacity-1
-%dir %{_iconsdir}/HighContrast/
-%{_iconsdir}/HighContrast/16x16
-%{_iconsdir}/HighContrast/22x22
-%{_iconsdir}/HighContrast/24x24
-%{_iconsdir}/HighContrast/32x32
-%{_iconsdir}/HighContrast/48x48
-%{_iconsdir}/HighContrast/256x256
-%{_iconsdir}/HighContrast/icon-theme.cache
-%{_iconsdir}/HighContrast/index.theme
-%{_iconsdir}/HighContrast/scalable
 # Menta
 %dir %{_datadir}/themes/Menta/
 %{_datadir}/themes/Menta/cinnamon
