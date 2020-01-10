@@ -43,6 +43,10 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/BlackMATE/unity
 %doc %{_datadir}/themes/BlackMATE/README
 %doc %{_datadir}/themes/BlackMATE/COPYING
+%{_datadir}/icons/mate-black/index.theme
+%{_datadir}/themes/BlackMATE-border/*
+# BlackCursor
+%{_datadir}/icons/mate-black/cursors/*
 # BlueMenta
 %dir %{_datadir}/themes/BlueMenta/
 %{_datadir}/themes/BlueMenta/cinnamon
@@ -53,6 +57,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/BlueMenta/metacity-1
 %{_datadir}/themes/BlueMenta/unity
 %{_datadir}/themes/BlueMenta/xfwm4
+%{_datadir}//themes/BlueMenta-border/*
 %doc %{_datadir}/themes/BlueMenta/README
 %doc %{_datadir}/themes/BlueMenta/COPYING
 # Blue-Submarine
@@ -63,6 +68,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/Blue-Submarine/gtk-3.0
 %{_datadir}/themes/Blue-Submarine/index.theme
 %{_datadir}/themes/Blue-Submarine/metacity-1
+%{_datadir}/themes/Blue-Submarine-border/*
 # ContrastHigh
 %dir %{_datadir}/themes/ContrastHigh/
 #%{_datadir}/themes/ContrastHigh/gtk-2.0
@@ -79,6 +85,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/GreenLaguna/unity
 %doc %{_datadir}/themes/GreenLaguna/README
 %doc %{_datadir}/themes/GreenLaguna/COPYING
+%{_datadir}/themes/GreenLaguna-border/*
 # Green-Submarine
 %dir %{_datadir}/themes/Green-Submarine/
 %{_datadir}/themes/Green-Submarine/cinnamon
@@ -87,6 +94,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/Green-Submarine/gtk-2.0
 %{_datadir}/themes/Green-Submarine/metacity-1
 %{_datadir}/themes/Green-Submarine/index.theme
+%{_datadir}/themes/Green-Submarine-border/*
 # HighContrast
 %dir %{_datadir}/themes/HighContrast/
 %{_datadir}/themes/HighContrast/metacity-1
@@ -100,19 +108,14 @@ This packages provides Themes for MATE.
 %{_iconsdir}/ContrastHigh/icon-theme.cache
 %{_iconsdir}/ContrastHigh/index.theme
 %{_iconsdir}/ContrastHigh/scalable
+
 # HighContrastInverse (fix)
 %dir %{_datadir}/themes/HighContrastInverse
+%{_datadir}/themes/HighContrastInverse/gtk-2.0/gtkrc
+%{_datadir}/themes/HighContrastInverse/index.theme
+%{_datadir}/themes/HighContrastInverse/pixmaps/*
 %{_datadir}/themes/HighContrast/metacity-1
-%dir %{_iconsdir}/HighContrast/
-%{_iconsdir}/HighContrast/16x16
-%{_iconsdir}/HighContrast/22x22
-%{_iconsdir}/HighContrast/24x24
-%{_iconsdir}/HighContrast/32x32
-%{_iconsdir}/HighContrast/48x48
-%{_iconsdir}/HighContrast/256x256
-%{_iconsdir}/HighContrast/icon-theme.cache
-%{_iconsdir}/HighContrast/index.theme
-%{_iconsdir}/HighContrast/scalable
+%{_datadir}/themes/HighContrastInverse/metacity-1/metacity-theme-1.xml
 # Menta
 %dir %{_datadir}/themes/Menta/
 %{_datadir}/themes/Menta/cinnamon
@@ -125,6 +128,10 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/Menta/xfwm4
 %doc %{_datadir}/themes/Menta/COPYING
 %doc %{_datadir}/themes/Menta/README
+%{_datadir}/themes/Menta-border/COPYING
+%{_datadir}/themes/Menta-border/README
+%{_datadir}/themes/Menta-border/index.theme
+%{_datadir}/themes/Menta-border/metacity-1/
 # Shiny
 %dir %{_datadir}/themes/Shiny/
 %{_datadir}/themes/Shiny/metacity-1
@@ -161,19 +168,6 @@ This packages provides Themes for MATE.
 %prep
 %setup -q
 # patch1
-mv icon-themes/ContrastHigh/16x16/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/16x16/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/22x22/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/22x22/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/24x24/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/24x24/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/256x256/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/256x256/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/32x32/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/32x32/apps/mate-power-manager.png
-mv icon-themes/ContrastHigh/48x48/apps/gnome-power-manager.png \
-   icon-themes/ContrastHigh/48x48/apps/mate-power-manager.png
-
 
 %build
 NOCONFIGURE=yes ./autogen.sh
