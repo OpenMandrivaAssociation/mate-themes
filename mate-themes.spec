@@ -2,7 +2,7 @@
 
 Summary:	Themes for MATE
 Name:		mate-themes
-Version:	3.22.19
+Version:	3.22.20
 Release:	1
 License:	LGPLv2+ and GPLv2+ and GPLv3+
 Group:		Graphical desktop/Other
