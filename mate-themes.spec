@@ -43,6 +43,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/BlackMATE/unity
 %doc %{_datadir}/themes/BlackMATE/README
 %doc %{_datadir}/themes/BlackMATE/COPYING
+%{_datadir}/icons/mate-black/index.theme
 %{_datadir}/themes/BlackMATE-border/*
 # BlackCursor
 %{_datadir}/icons/mate-black/cursors/*
@@ -84,6 +85,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/GreenLaguna/unity
 %doc %{_datadir}/themes/GreenLaguna/README
 %doc %{_datadir}/themes/GreenLaguna/COPYING
+%{_datadir}/themes/GreenLaguna-border/*
 # Green-Submarine
 %dir %{_datadir}/themes/Green-Submarine/
 %{_datadir}/themes/Green-Submarine/cinnamon
@@ -113,6 +115,7 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/HighContrastInverse/index.theme
 %{_datadir}/themes/HighContrastInverse/pixmaps/*
 %{_datadir}/themes/HighContrast/metacity-1
+%{_datadir}/themes/HighContrastInverse/metacity-1/metacity-theme-1.xml
 # Menta
 %dir %{_datadir}/themes/Menta/
 %{_datadir}/themes/Menta/cinnamon
