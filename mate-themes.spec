@@ -2,7 +2,7 @@
 
 Summary:	Themes for MATE
 Name:		mate-themes
-Version:	3.22.20
+Version:	3.22.21
 Release:	1
 License:	LGPLv2+ and GPLv2+ and GPLv3+
 Group:		Graphical desktop/Other
@@ -10,6 +10,7 @@ Url:		https://mate-desktop.org
 Source0:	https://pub.mate-desktop.org/releases/themes/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
+BuildRequires:	autoconf-archive
 BuildRequires:	intltool
 BuildRequires:	icon-naming-utils
 BuildRequires:	mate-common
