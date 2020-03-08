@@ -131,7 +131,7 @@ This packages provides Themes for MATE.
 %doc %{_datadir}/themes/Menta/README
 %{_datadir}/themes/Menta-border/COPYING
 %{_datadir}/themes/Menta-border/README
-%{_datadir}/themes/Menta-border/index.theme
+#%{_datadir}/themes/Menta-border/index.theme
 %{_datadir}/themes/Menta-border/metacity-1/
 # Shiny
 %dir %{_datadir}/themes/Shiny/
