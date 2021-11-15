@@ -163,7 +163,10 @@ This packages provides Themes for MATE.
 %{_datadir}/themes/TraditionalOk/openbox-3
 %{_datadir}/themes/TraditionalOk/xfwm4
 %doc %{_datadir}/themes/TraditionalOk/COPYING
-
+# YaruGreen
+%{_datadir}/themes/YaruGreen
+# YaruOk
+%{_datadir}/themes/YaruOk
 #---------------------------------------------------------------------------
 
 %prep
